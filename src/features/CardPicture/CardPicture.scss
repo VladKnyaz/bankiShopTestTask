@@ -1,0 +1,62 @@
+@use "@/fontsMixins.scss";
+
+.card-picture {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 280px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    border: 1px solid #E1E1E1;
+
+    &.isSold {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+
+    .image {
+        display: block;
+        background: #A0A0A0;
+        height: 160px;
+    }
+
+    .description {
+        padding: 24px;
+        padding-top: 20px;
+        padding-bottom: 22px;
+        .name {
+            @include fontsMixins.h2;
+
+        }
+
+        .author {
+            @include fontsMixins.h2;
+        
+        }
+    }
+
+    .price-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 19px;
+        padding: 24px;
+        padding-top: 0;
+        .prices {
+            display: flex;
+            flex-direction: column;
+            .old-price {
+                @include fontsMixins.h6;
+                color: #A0A0A0;
+                text-decoration: line-through;
+            }
+    
+            .current-price {
+                @include fontsMixins.h3;
+            }
+        }
+
+    }
+}

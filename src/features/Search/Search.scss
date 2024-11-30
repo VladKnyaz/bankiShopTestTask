@@ -1,0 +1,24 @@
+@use "@/fontsMixins.scss";
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .input {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 122px;
+        input {
+            outline: none;
+            background: none;
+            @include fontsMixins.h5;
+            border: none;   
+            color: #343030;
+            border: 1px solid #E1E1E1;
+            padding-left: 16px;
+            &::placeholder {
+               color: #9F9F9F 
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+@use "@/fontsMixins.scss";
+
+.home {
+    .cards {
+        margin-top: 45px;
+        .title {
+            @include fontsMixins.h1;
+        }
+
+        &-content {
+            margin-top: 39px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 32px;
+        }
+    }
+
+    @media (max-width: 1366px) {
+        .cards {
+            &-content {
+                grid-template-columns: repeat(3,1fr);
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .cards {
+            &-content {
+                grid-template-columns: repeat(3,1fr);
+                .card-picture {
+                    justify-self: center;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px ) {
+        .cards {
+            &-content {
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
+    }
+
+    
+    @media (max-width: 360px ) {
+        .cards {
+            &-content {
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
+    }
+}

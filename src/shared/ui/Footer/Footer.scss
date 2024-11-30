@@ -1,0 +1,95 @@
+@use "@/fontsMixins.scss";
+
+.footer {
+    margin-top: auto;
+    width: 100%;
+    background: #ECEAEA;
+    display: flex;
+    justify-content: center;
+    height: 96px;
+    .container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 416px;
+        .navigation {
+            .list {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                margin-left: 96px;
+                gap: 48px;
+                list-style: none;
+                .item {
+                    a {
+                        @include fontsMixins.h5;
+                        color: #343030;
+                        transition: 0.2s;
+                        &:hover {
+                            color: #5B3A32;
+                        }
+                    }
+                }
+            }
+        }
+        .contact {
+            display: flex;
+            align-items: center;
+            gap: 51px;
+            p {
+                @include fontsMixins.h5;
+                text-wrap: nowrap;
+            }
+        }
+    }
+
+    @media (max-width: 1366px) {
+        .container {
+            .navigation {
+                .list {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 1024px) {
+
+    }
+
+    @media (max-width: 768px ) {
+        height: 100%;
+        .container {
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            .navigation {
+                .list {
+                    flex-direction: column;
+                    gap: 10px;
+                }
+            }
+            .contact {
+                gap: 11px;
+                flex-direction: column;
+                p {
+                    @include fontsMixins.h5;
+                    text-wrap: wrap;
+                }
+            }
+        }
+    }
+
+    
+    @media (max-width: 360px ) {
+        .container {
+            gap: 5px;
+            .navigation {
+                .list {
+                }
+            }
+            .contact {
+                p {
+                }
+            }
+        }
+    }
+}
